@@ -1,0 +1,120 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white min-h-screen flex items-center">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 py-16">
+
+    <!-- Left: Info -->
+    <div class="space-y-6 pl-6" data-aos="fade-right">
+      <h2 class="text-3xl font-bold text-green-400">Get in Touch</h2>
+      <p class="text-gray-400">Feel free to contact me. I usually reply within 24 hours.</p>
+      <div class="space-y-3">
+        <p><strong>📍 Address:</strong> Bochaganj, Dinajpur, Rangpur, Bangladesh</p>
+        <p><strong>📞 Phone:</strong> +880 177 3282 908</p>
+        <p><strong>✉️ Email:</strong> jahangir99659@gmail.com</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="#" class="text-green-400 hover:text-green-300">🌐 LinkedIn</a>
+        <a href="#" class="text-green-400 hover:text-green-300">🐙 GitHub</a>
+        <a href="#" class="text-green-400 hover:text-green-300">📸 Instagram</a>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg" data-aos="fade-left">
+      <h2 class="text-2xl font-semibold mb-6">Send a Message</h2>
+
+      <!-- Success Message -->
+      {% if messages %}
+        {% for message in messages %}
+          <div class="p-4 mb-6 text-green-800 rounded-lg bg-green-200 animate-fade-in">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      <form method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {% csrf_token %}
+
+        <!-- Name -->
+        <div class="relative z-0 w-full group">
+          <input type="text" name="name" id="name"
+            class="block py-4 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-gray-500 
+                   appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer" 
+            placeholder=" " required />
+          <label for="name"
+            class="absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0]
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
+                   peer-focus:scale-75 peer-focus:-translate-y-6">
+            Your Name
+          </label>
+        </div>
+
+        <!-- Phone -->
+        <div class="relative z-0 w-full group">
+          <input type="text" name="phone" id="phone"
+            class="block py-4 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-gray-500 
+                   appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer" 
+            placeholder=" " />
+          <label for="phone"
+            class="absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0]
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
+                   peer-focus:scale-75 peer-focus:-translate-y-6">
+            Your Phone
+          </label>
+        </div>
+
+        <!-- Email -->
+        <div class="relative z-0 w-full group">
+          <input type="email" name="email" id="email"
+            class="block py-4 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-gray-500 
+                   appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer" 
+            placeholder=" " required />
+          <label for="email"
+            class="absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0]
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
+                   peer-focus:scale-75 peer-focus:-translate-y-6">
+            Your Email
+          </label>
+        </div>
+
+        <!-- Message -->
+        <div class="relative z-0 w-full group md:col-span-1">
+          <textarea name="message" id="message" rows="5"
+            class="block py-4 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-gray-500 
+                   appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer resize-none" 
+            placeholder=" " required></textarea>
+          <label for="message"
+            class="absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0]
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
+                   peer-focus:scale-75 peer-focus:-translate-y-6">
+            Your Message
+          </label>
+        </div>
+
+        <!-- Submit Button full row -->
+        <div class="md:col-span-2">
+          <button type="submit"
+            class="w-full py-4 bg-green-500 hover:bg-green-400 text-black font-semibold rounded-lg transition duration-300">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- Tailwind Custom Animation -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+</style>
+{% endblock %}

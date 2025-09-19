@@ -1,0 +1,56 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+{% endblock %}
+{% block title %}Home{% endblock %}
+<!-- main section -->
+{% block content %}
+{% comment %} Main Content {% endcomment %}
+
+<section class="bg-gray-900 text-white min-h-screen flex items-center pt-20 md:pt-28">
+  <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <!-- Left: Info with Animation -->
+    <div data-aos="fade-right">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+        Hi, I'm <span class="text-green-400">Jahangir Alam</span> <br>
+        A Passionate Web Developer
+      </h1>
+      <p class="mt-5 text-lg text-gray-300">
+        I love building modern web applications using Django, Python and Tailwind CSS.
+        Let's work together to create something awesome.
+        My journey started with Python and quickly evolved into crafting full web apps using Django.
+         I'm constantly exploring new tools, improving my UI/UX skills,
+          and writing clean backend logic.
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-6 flex gap-4">
+        <a href="{% url 'projects' %}" 
+           class="px-6 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-black font-semibold transition duration-300">
+          View Projects
+        </a>
+        <a href="{% url 'contact'%}" 
+           class="px-6 py-3 rounded-lg border border-green-400 hover:bg-green-500 hover:text-black transition duration-300">
+          Hire Me
+        </a>
+        <a href="{% url 'cv_page' %}" 
+           class="px-6 py-3 rounded-lg border border-gray-500 hover:border-green-400 transition duration-300">
+          Download CV
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Photo with Animation -->
+    <div class="flex justify-center" data-aos="fade-left">
+      <img src="{% static 'images/profile.png' %}" 
+           alt="Profile Photo" 
+           class="w-72 h-72 md:w-[400px] md:h-[506px] object-cover rounded-full border-4 border-gray-800 shadow-xl hover:scale-105 hover:shadow-green-500/60 transition duration-700 ease-in-out">
+    </div>
+
+  </div>
+</section>
+
+
+
+{% endblock %}

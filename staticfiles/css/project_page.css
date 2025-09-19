@@ -1,0 +1,38 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Load Animation */
+.card-animate {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hover effect */
+.project-card {
+  transition: transform 1s ease-in-out;
+}
+
+.project-card {
+  perspective: 1000px;
+}
+
+.project-card:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+

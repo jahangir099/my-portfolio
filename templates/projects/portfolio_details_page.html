@@ -1,0 +1,48 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+
+{% block title %}Portfolio Details{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-gray-200 min-h-screen flex items-center justify-center px-6">
+  <div class="max-w-3xl text-center space-y-6 animate-fade-in">
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-5xl font-bold text-green-400">
+      Welcome to My Portfolio
+    </h1>
+
+    <!-- Info Text -->
+    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+      Thank you for visiting!  
+      The website you are currently exploring is not just a demo —  
+      <span class="text-green-400 font-semibold">this entire website is my portfolio</span>.  
+      Here you can check out my skills, projects, experiences, and all the details about me as a Web Developer.
+    </p>
+
+    <!-- Call to Action -->
+    <p class="text-gray-400">
+      Please take your time to explore the pages, browse the projects, and get in touch through the contact page.
+    </p>
+
+    <!-- Button -->
+    <div class="pt-4">
+      <a href="{% url 'home' %}"
+         class="px-6 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold rounded-lg transition duration-300">
+        🔗 Go Back to Home
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Animation -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+</style>
+{% endblock %}

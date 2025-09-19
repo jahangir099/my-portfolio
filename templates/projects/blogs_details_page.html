@@ -1,0 +1,53 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Blog Details{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white min-h-screen py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    
+    <!-- Title + Description -->
+    <h1 class="text-4xl font-bold mb-4">How I Built My Blog Website</h1>
+    <p class="text-gray-300 text-lg mb-6">
+      This blog project is a full-featured blogging platform built using Django. 
+      It includes post creation, editing, commenting system, and user authentication.
+      The design is modern, clean, and responsive.
+    </p>
+
+    <!-- Features -->
+    <ul class="list-disc pl-6 mb-8 text-gray-300">
+      <li>Dynamic blog post management</li>
+      <li>Comment system with moderation</li>
+      <li>User login & registration</li>
+      <li>Responsive UI with custom CSS</li>
+      <li>SEO-friendly structure</li>
+    </ul>
+
+    <!-- Screenshots Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <img src="{% static 'images/blogs/blogs-1.png' %}" class="rounded-lg cursor-pointer" onclick="openModal(this.src)">
+      <img src="{% static 'images/blogs/blogs-2.png' %}" class="rounded-lg cursor-pointer" onclick="openModal(this.src)">
+      <img src="{% static 'images/blogs/blogs-3.png' %}" class="rounded-lg cursor-pointer" onclick="openModal(this.src)">
+      <img src="{% static 'images/blogs/blogs-4.png' %}" class="rounded-lg cursor-pointer" onclick="openModal(this.src)">
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+  <button class="absolute top-5 right-5 text-white text-3xl" onclick="closeModal()">✖</button>
+  <img id="modalImage" src="" class="max-h-[80vh] rounded-lg shadow-lg">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+  }
+  function closeModal() {
+    document.getElementById("imageModal").classList.add("hidden");
+  }
+</script>
+{% endblock %}

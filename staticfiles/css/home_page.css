@@ -1,0 +1,80 @@
+.nav-link {
+  position: relative;
+  font-weight: 600;
+  padding: 6px 14px;
+  color: #e5e7eb; /* gray-200 */
+  transition: all 0.4s ease;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Glowing border */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: linear-gradient(90deg,
+      #ff0000,
+      #00ff00,
+      #0000ff,
+      #ff00ff,
+      #00ffff,
+      #ffff00,
+      #ff0000);
+  background-size: 400% 400%;
+  animation: border-anim 6s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Gradient text */
+.nav-link::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      #ff0080,
+      #7928ca,
+      #2afadf,
+      #00ff94);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-anim 4s ease infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+/* Hover state */
+.nav-link:hover {
+  color: rgb(red, green, blue); /* old text fully transparent */
+}
+.nav-link:hover::before {
+  opacity: 1; /* glowing border show */
+}
+.nav-link:hover::after {
+  opacity: 1; /* gradient text show */
+  z-index: 2; /* always above background */
+}
+
+/* Keyframes */
+@keyframes border-anim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes text-anim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

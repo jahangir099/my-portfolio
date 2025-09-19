@@ -1,0 +1,84 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Projects{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/project_page.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white py-16 min-h-screen">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-green-400 mb-4 text-center py-4">My Projects</h2>
+      <p class="text-gray-400 text-lg mb-12 text-center max-w-2xl mx-auto">
+         A collection of my recent works including web apps, automation tools, and creative projects.
+      </p>
+
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Project 1 -->
+  <div class="bg-gray-800 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-green-500/50 project-card card-animate">
+        <img src="{% static 'images/e-commerce.png' %}" alt="E-Commerce" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">E-Commerce Website</h3>
+          <p class="text-gray-400 mb-4">Full-featured online shop built with Django + Tailwind.</p>
+          <a href="{% url 'ecommerce_details' %}" class="inline-block bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-500 ease-in-out">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+  <div class="bg-gray-800 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-green-500/50 project-card card-animate">
+        <img src="{% static 'images/blog.jpg' %}" alt="Blog" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Blog Website</h3>
+          <p class="text-gray-400 mb-4">Dynamic blog with user login, comments & admin control.</p>
+          <a href="{% url 'blogs_details' %}" class="inline-block bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-500 ease-in-out">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+  <div class="bg-gray-800 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-green-500/50 project-card card-animate">
+        <img src="{% static 'images/automation.png' %}" alt="Automation" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Web Automation Bot</h3>
+          <p class="text-gray-400 mb-4">Auto-booking bot using Selenium & Playwright.</p>
+          <a href="{% url 'automation_details'%}" class="inline-block bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-500 ease-in-out">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+  <div class="bg-gray-800 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-green-500/50 project-card card-animate">
+        <img src="{% static 'images/scrapping.png' %}" alt="Scraping" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Web Scraping Dashboard</h3>
+          <p class="text-gray-400 mb-4">Collect & display data dynamically with BeautifulSoup.</p>
+          <a href="{% url 'scraping_details' %}" class="inline-block bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-500 ease-in-out">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+  <div class="bg-gray-800 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-green-500/50 project-card card-animate">
+        <img src="{% static 'images/weather.jpg' %}" alt="Weather App" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Weather App</h3>
+          <p class="text-gray-400 mb-4">Live weather updates using external API integration.</p>
+          <a href="{% url 'weather_details' %}" class="inline-block bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-500 ease-in-out">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+  <div class="bg-gray-800 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-green-500/50 project-card card-animate">
+        <img src="{% static 'images/portfolio.jpg' %}" alt="Portfolio" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+          <p class="text-gray-400 mb-4">Personal portfolio showcasing all skills & works.</p>
+          <a href="{% url 'portfolio_details' %}" class="inline-block bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-500 ease-in-out">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

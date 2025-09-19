@@ -1,0 +1,38 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Web Scraping Project Details{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white min-h-screen py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    
+    <!-- Title + Description -->
+    <h1 class="text-4xl font-bold mb-4">Web Scraping Automation</h1>
+    <p class="text-gray-300 text-lg mb-6">
+      This project demonstrates how I built a Python automation script to scrape data 
+      from websites efficiently. The system extracts useful information, 
+      stores it in structured formats, and can be scheduled to run automatically.  
+      It showcases my skills in Python, BeautifulSoup, Selenium, and data handling.
+    </p>
+
+    <!-- Features -->
+    <ul class="list-disc pl-6 mb-8 text-gray-300">
+      <li>Automated data extraction from real websites</li>
+      <li>Dynamic page handling with Selenium</li>
+      <li>BeautifulSoup for HTML parsing</li>
+      <li>Export scraped data to CSV/Excel</li>
+      <li>Can run daily with scheduling</li>
+    </ul>
+
+    <!-- Video Demo -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Project Demo</h2>
+      <video controls class="w-full h-96 rounded-lg shadow-lg">
+        <source src="{% static 'videos/scraping/scraping_demo.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

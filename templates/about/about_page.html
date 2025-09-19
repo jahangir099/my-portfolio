@@ -1,0 +1,72 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about_page.css' %}">
+{% endblock %}
+
+{% block content %}
+{% comment %} About Page Content {% endcomment %}
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="{% static 'images/profiles.jpg' %}" alt="Profile">
+
+    <div class="hero-text">
+      <h1>Hi, I'm CoderBro</h1>
+      <h2>Full Stack Web Developer</h2>
+      <p>I am a Full Stack Web Developer with hands-on experience in building modern and responsive websites.
+         I have successfully worked on projects like E-commerce platforms, Blogs, Web Automation, and Web Scraping tools.</p>
+    </div>
+  </section>
+
+  <!-- About Text -->
+  <section class="about-text">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate developer skilled in Python, Django, JavaScript, TailwindCSS, Web Scraping, and Automation.  
+      My goal is to provide professional, reliable, and efficient solutions to my clients while continuously improving my expertise.  
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">TailwindCSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python & Django</div>
+      <div class="skill-card">Web Scraping</div>
+      <div class="skill-card">Web Automation</div>
+      <div class="skill-card">SQL & Databases</div>
+      <div class="skill-card">Bootstrap</div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section>
+    <h2>My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>2022</h3>
+        <p>Started learning web development basics (HTML, CSS, Python, Django).</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2023-2024</h3>
+        <p>Built projects like Weather App, Blog Site, and E-commerce Demo.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2025</h3>
+        <p>Worked with advanced skills like Web Scraping & Automation, building bots and real-world tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <a href="{% url 'cv_page' %}" class="btn">📄 Download Resume</a>
+    <a href="{% url 'contact' %}" class="btn">📩 Contact Me</a>
+  </section>
+{% endblock %}

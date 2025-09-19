@@ -1,0 +1,107 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- Tailwind animations will be used -->
+{% endblock %}
+
+{% block title %}My CV{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-900 text-gray-100 transition-colors duration-500">
+  <div class="flex justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="bg-gray-800 shadow-2xl rounded-3xl w-full max-w-4xl p-8 md:p-12 transform scale-95 opacity-0 animate-fade-in">
+      
+      <!-- Profile Section -->
+      <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
+        <!-- Profile Image -->
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 md:mb-0 md:mr-6 border-4 border-indigo-500 animate-bounce">
+          <img src="{% static 'images/profiles.jpg' %}" alt="Profile Image" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Name, Title, Contact -->
+        <div class="text-center md:text-left animate-slide-up">
+          <h1 class="text-4xl font-bold text-white">Jahangir Alam</h1>
+          <p class="text-indigo-400 text-xl mt-1">Web Developer | Python | Django</p>
+          
+          <div class="mt-3 space-y-1 text-gray-300 text-sm md:text-base">
+            <p>■ Email: jahangir99659@gmail.com</p>
+            <p>■ Phone: 01773282908</p>
+            <p>■ Address: Bochaganj, Dinajpur, Rangpur, Bangladesh</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Career Objective -->
+      <div class="mb-8 animate-slide-up delay-100">
+        <h2 class="text-2xl font-semibold text-white mb-2">Career Objective</h2>
+        <p class="text-gray-300">
+          I am a passionate and dedicated Web Developer skilled in both frontend and backend technologies.
+          I aim to deliver high-quality projects that solve real-world problems while constantly improving my skills.
+        </p>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="mb-8 animate-slide-up delay-200">
+        <h2 class="text-2xl font-semibold text-white mb-3">Skills</h2>
+        <ul class="flex flex-wrap gap-3">
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">HTML</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">CSS</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">TailwindCSS</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">Bootstrap</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">JavaScript (Basics)</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">Python / Django</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">Web Scraping (BS4, Selenium)</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">Web Automation (Selenium/Playwright/Bots)</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">SQL Databases</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">Responsive Web Design</li>
+          <li class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transform hover:scale-105 transition duration-300">Git & GitHub</li>
+        </ul>
+      </div>
+
+      <!-- Projects & Experience -->
+      <div class="mb-8 animate-slide-up delay-300">
+        <h2 class="text-2xl font-semibold text-white mb-3">Projects & Experience</h2>
+        <ul class="list-disc list-inside space-y-1 text-gray-300">
+          <li>Built and deployed a Portfolio Website using Django & TailwindCSS</li>
+          <li>Created E-commerce web application with cart & order system</li>
+          <li>Developed automation bots for web booking and form submissions</li>
+          <li>Built multiple blog websites using Django</li>
+          <li>Implemented weather web app with API integration</li>
+        </ul>
+      </div>
+
+      <!-- Download Button -->
+      <div class="text-center mt-8 animate-fade-in delay-400">
+        <a href="{% static 'files/Jahangir_Alam_CV.pdf' %}" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:-translate-y-1">
+          ⬇️ Download PDF
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Tailwind Animations -->
+<style>
+@keyframes fade-in {
+  0% {opacity:0; transform:scale(0.95);}
+  100% {opacity:1; transform:scale(1);}
+}
+.animate-fade-in { animation: fade-in 0.8s forwards; }
+
+@keyframes slide-up {
+  0% {opacity:0; transform:translateY(20px);}
+  100% {opacity:1; transform:translateY(0);}
+}
+.animate-slide-up { animation: slide-up 0.8s forwards; }
+
+.animate-bounce { animation: bounce 1.5s infinite; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+</style>
+
+{% endblock %}

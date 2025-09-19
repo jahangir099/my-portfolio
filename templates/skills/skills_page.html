@@ -1,0 +1,223 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/skill_page.css' %}">
+{% endblock %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">My Skills</h2>
+      <p class="mt-3 text-gray-400 max-w-2xl mx-auto">
+        Tools & technologies I use to build modern web apps.
+      </p>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Full Stack -->
+      <div class="skill-card" data-direction="left">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Fullstack" class="skill-svg">
+            <h3 class="skill-name">Full Stack Web Development</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Django + Tailwind + JavaScript.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">100%</div>
+          </div>
+        </div>
+      </div>
+
+<!-- Web Scraping -->
+<div class="skill-card" data-direction="right">
+  <div class="skill-inner">
+    <div class="skill-top">
+      <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" 
+           alt="Web Scraping" class="skill-svg w-10 h-10">
+      <h3 class="skill-name">Web Scraping</h3>
+    </div>
+    <p class="skill-desc text-gray-400">
+      Extracting and collecting useful data from websites.
+    </p>
+    <div class="skill-progress mt-4">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <div class="progress-percent">100%</div>
+    </div>
+  </div>
+</div>
+
+<!-- Web Automation -->
+<div class="skill-card" data-direction="left">
+  <div class="skill-inner">
+    <div class="skill-top">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712100.png" 
+           alt="Web Automation" class="skill-svg w-10 h-10">
+      <h3 class="skill-name">Web Automation</h3>
+    </div>
+    <p class="skill-desc text-gray-400">
+      Automating repetitive tasks using Selenium & Playwright.
+    </p>
+    <div class="skill-progress mt-4">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <div class="progress-percent">100%</div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- HTML -->
+      <div class="skill-card" data-direction="right">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-svg">
+            <h3 class="skill-name">HTML</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Semantic & accessible markup.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">100%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="skill-card" data-direction="left">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-svg">
+            <h3 class="skill-name">CSS</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Responsive layouts & animations.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">97%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tailwind -->
+      <div class="skill-card" data-direction="right">
+        <div class="skill-inner">
+          <div class="skill-top">
+           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" 
+             alt="Tailwind CSS" class="skill-svg">
+
+            <h3 class="skill-name">Tailwind CSS</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Utility-first modern CSS.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">100%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-card" data-direction="left">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="skill-svg">
+            <h3 class="skill-name">JavaScript</h3>
+          </div>
+          <p class="skill-desc text-gray-400">ES6+, DOM, async flows.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">88%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card" data-direction="right">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-svg">
+            <h3 class="skill-name">Python</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Backend & automation scripting.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">100%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Django -->
+      <div class="skill-card" data-direction="left">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-svg">
+            <h3 class="skill-name">Django</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Rapid backend development.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">100%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SQL -->
+      <div class="skill-card" data-direction="right">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-svg">
+            <h3 class="skill-name">SQL</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Database design & queries.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">98%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="skill-card" data-direction="left">
+        <div class="skill-inner">
+          <div class="skill-top">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-svg">
+            <h3 class="skill-name">Bootstrap</h3>
+          </div>
+          <p class="skill-desc text-gray-400">Quick UI prototyping.</p>
+          <div class="skill-progress mt-4">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="progress-percent">78%</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const cards = document.querySelectorAll('.skill-card');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          const fill = entry.target.querySelector('.progress-fill');
+          const percentEl = entry.target.querySelector('.progress-percent');
+          if (fill && percentEl) {
+            const pct = parseInt(percentEl.textContent.replace('%','').trim()) || 0;
+            setTimeout(() => { fill.style.width = pct + '%'; }, 200);
+          }
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(c => io.observe(c));
+  })();
+</script>
+{% endblock %}
